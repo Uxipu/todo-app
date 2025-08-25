@@ -16,7 +16,10 @@ class DialogBox extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AlertDialog(
-      backgroundColor: Colors.yellow[300],
+      backgroundColor: Colors.white,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(12),
+      ),
       content: Container(
         height: 120,
         child: Column(
@@ -35,13 +38,21 @@ class DialogBox extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
-                //save button
-                MyButton(text: "Save", onPressed: onSave),
+                // Save button
+                MyButton(
+                  text: "Save",
+                  onPressed: onSave,
+                  color: const Color(0xFFFFE082),
+                ),
 
                 const SizedBox(width: 8),
 
-                //cancel button
-                MyButton(text: "Cancel", onPressed: onCancel),
+                // Cancel button
+                MyButton(
+                  text: "Cancel",
+                  onPressed: onCancel,
+                  color: const Color(0xFFFFF9C4),
+                ),
               ],
             )
           ],
